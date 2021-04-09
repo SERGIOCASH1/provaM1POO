@@ -24,6 +24,7 @@ void CheckListLivros::removerLivro(string nome)
                 vetorLivros[i].setGenero("");
                 vetorLivros[i].setExemplaresVendidos(0);
                 vetorLivros[i].setDataLancamento("");
+                livrosCadastrados = livrosCadastrados - 1;
             }
         }
 }
@@ -53,15 +54,16 @@ void CheckListLivros::listaLivro()
 {
     int tam = vetorLivros.size();
 
-    string nome = "";
+    string nome = "-";
     for (int i =0; i<tam; i++){
         if(nome == vetorLivros[i].getNome()){
+        }
+        else{
             cout << "Livro: " << vetorLivros[i].getNome() << endl;
             cout << "Genero: " << vetorLivros[i].getGenero() << endl;
             cout << "Autor: " << vetorLivros[i].getAutor() << endl;
             cout << "Data de lancamento: " << vetorLivros[i].getDataLancamento() << endl;
             cout << "Numero de unidades vendidas:: " << vetorLivros[i].getExemplaresVendidos() << "\n"<< endl;
-
         }
     }
     if (livrosCadastrados != 0){

@@ -55,9 +55,11 @@ void CheckListFilmes::pesquisarFilme(string nome)
 void CheckListFilmes::listaFilme()
 {
     int tam = vetorFilmes.size();
-    string nome = "";
+    string nome = "-";
     for (int i =0; i<tam; i++){
         if(nome == vetorFilmes[i].getNome()){
+        }
+        else{
             cout << "Filme: " << vetorFilmes[i].getNome() << endl;
             cout << "Genero: " << vetorFilmes[i].getGenero() << endl;
             cout << "Estudio: " << vetorFilmes[i].getEstudio() << endl;

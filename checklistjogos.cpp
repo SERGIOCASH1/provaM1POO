@@ -54,9 +54,11 @@ void CheckListJogos::listaJogo()
 {
     int tam = vetorJogos.size();
 
-    string nome = "";
+    string nome = "-";
     for (int i =0; i<tam; i++){
-        if(nome == vetorJogos[i].getNome()){
+        if(nome == vetorJogos[i].getNome()){         
+        }
+        else{
             cout << "Jogo: " << vetorJogos[i].getNome() << endl;
             cout << "Genero: " << vetorJogos[i].getGenero() << endl;
             cout << "Produtora: " << vetorJogos[i].getProdutora() << endl;
